@@ -49,7 +49,7 @@ dispatch(YourSliceName.YourAction(Your Data));
 `;
   return (
     <>
-      <div className="w-1/2 text-center mx-auto border border-black p-5 mb-3">
+      <div className="w-full     text-center mx-auto border border-black p-5 mb-3 md:w-2/3 lg:w-1/2">
         <h1 className="text-6xl bold mb-2">Store</h1>
         <h3 className="py-2">Simple Code To Store</h3>
         <CodeBlock code={Store} />
@@ -62,7 +62,7 @@ dispatch(YourSliceName.YourAction(Your Data));
         </h1>
         <CodeBlock code={Provider} />
       </div>
-      <div className="w-1/2 text-center mx-auto border border-black p-5 mb-3">
+      <div className="w-full     text-center mx-auto border border-black p-5 mb-3 md:w-2/3 lg:w-1/2">
         <h1 className="text-6xl bold mb-2">Slice</h1>
         <h3 className="py-2">Simple Code To Slice</h3>
         <CodeBlock code={Slice} />

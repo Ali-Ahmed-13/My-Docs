@@ -40,15 +40,17 @@ module.exports = {
   // #endregion End Codes
   return (
     <>
-      <div className="w-1/2 text-center mx-auto border border-black p-5 mb-3">
+      <div className="w-full     text-center mx-auto border border-black p-5 mb-3 md:w-2/3 lg:w-1/2">
         <h1 className="text-6xl bold mb-2">React + Vite</h1>
         <h1 className="py-2">To Start Your Project</h1>
         <CodeBlock code={React_Vite} />
         <hr className="h-3" />
-        <h1 className="text-4xl bold mb-2 text-red-700">Not Forget To Do This</h1>
+        <h1 className="text-4xl bold mb-2 text-red-700">
+          Not Forget To Do This
+        </h1>
         <CodeBlock code={npmI} />
       </div>
-      <div className="w-1/2 text-center mx-auto border border-black p-5 mb-3">
+      <div className="w-full     text-center mx-auto border border-black p-5 mb-3 md:w-2/3 lg:w-1/2">
         <h1 className="text-6xl bold mb-2">React Router</h1>
         <h1 className="py-2">Fristly Install Library</h1>
         <CodeBlock code={reactRouterDom} />
@@ -59,7 +61,7 @@ module.exports = {
         <h1 className="py-2">In Routes File</h1>
         <CodeBlock code={RoutesReactRouter} />
       </div>
-      <div className="w-1/2 text-center mx-auto border border-black p-5 mb-3">
+      <div className="w-full     text-center mx-auto border border-black p-5 mb-3 md:w-2/3 lg:w-1/2">
         <h1 className="text-6xl bold mb-2">Tailwind Css With React</h1>
         <h1 className="py-2">Fristly Install Library</h1>
         <CodeBlock code={tailwindlibrary} />

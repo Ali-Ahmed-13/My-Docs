@@ -33,10 +33,16 @@ let YourSliceFileName = createSlice({
       state.value = action.payload || Another Action
     }
   },
-  extraReducers: [AnotherAction]: (state,action) => {
+  extraReducers: (builder) => {
+    builder
+    .addCase(AnotherAction, (state, action) => {
       state.value = action.payload || Another Action
-    }
-  });
+    })
+    //`` if you have more extra reducers do 
+    // .addCase(AnotherAction, (state, action) => { state.value = action.payload || Another Action })  
+  }
+
+    })
 export default YourSliceFileName.reducer;
 export let { YourAction } = YourSliceFileName.actions;
 `;

@@ -38,7 +38,7 @@ let YourSliceFileName = createSlice({
     .addCase(AnotherAction, (state, action) => {
       state.value = action.payload || Another Action
     })
-    //`` if you have more extra reducers do 
+    /// if you have more extra reducers do 
     // .addCase(AnotherAction, (state, action) => { state.value = action.payload || Another Action })  
   }
 

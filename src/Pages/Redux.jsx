@@ -51,6 +51,35 @@ let YourSliceName = useSelector((state) => state.YourSliceName);
 let dispatch = useDispatch();
 dispatch(YourSliceName.YourAction(Your Data));
 `;
+
+  let asyncThunk = `import { createAsyncThunk } from "@reduxjs/toolkit";
+let YourAsyncThunk = createAsyncThunk(
+  "YourSliceName/YourAsyncThunk",
+  async (data, thunkAPI) => {
+    let { rejectWithValue } = thunkAPI;
+    try {
+      return data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+`;
+  let useAsyncThunk = `let YourSlice = createSlice({
+  /// Your Slice Code
+  extraReducers: (builder) => {
+    builder
+      .addCase(YourAsyncThunk.pending, (state) => {
+        console.log("pending");
+      })
+      .addCase(YourAsyncThunk.fulfilled, (state, action) => {
+        state.anything = action.payload;
+      })
+      .addCase(YourAsyncThunk.rejected, (state, action) => {
+        console.log(action.payload);
+      })
+  },
+});`;
   return (
     <>
       <div className="w-full     text-center mx-auto border border-black p-5 mb-3 md:w-2/3 lg:w-1/2">
@@ -74,6 +103,12 @@ dispatch(YourSliceName.YourAction(Your Data));
       <div className="w-1/2 text-center mx-auto border border-black p-5 mb-10">
         <h1 className="text-6xl bold mb-2">To Use Redux</h1>
         <CodeBlock code={ReduxUseCode} />
+      </div>
+      <div className="w-1/2 text-center mx-auto border border-black p-5 mb-10">
+        <h1 className="text-6xl bold mb-3">Create Async Thunk</h1>
+        <CodeBlock code={asyncThunk} />
+        <h1 className="text-6xl bold mb-2 mt-10">To Use It</h1>
+        <CodeBlock code={useAsyncThunk} />
       </div>
     </>
   );

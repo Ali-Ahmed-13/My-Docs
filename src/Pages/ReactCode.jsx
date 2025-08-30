@@ -11,14 +11,8 @@ function ReactCode() {
     <Route path="" element={<Website />}/>
   </Routes>
       `;
-  let tailwindlibrary = `npm install -D tailwindcss@3.4.3 postcss autoprefixer`;
-  let postcss = `module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-};
-`;
+  let tailwindlibrary = `npm install tailwindcss@3 postcss autoprefixer`;
+  let tailwindlibrarynpx = `npx tailwindcss init -p`;
   let tailwindconfig = `/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
@@ -37,6 +31,41 @@ module.exports = {
 `;
   let React_Vite = `npm create vite@latest my-app -- --template react`;
   let npmI = `npm install`;
+
+  let framerInstall = `npm i framer-motion`;
+  let useMotion = `// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+`;
+  let TextAnimation = `let text = "ALi Is A Best Programmer In The World";
+  ////////////////////////////
+let hVariant = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+let spanVariant = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+  },
+};
+  /////////////////////////////
+<motion.h1
+    variants={hVariant}
+    initial="hidden"
+    animate="visible"
+    className="text-5xl font-bold"
+  >
+      {text.split("").map((char, index) => (
+        <motion.span key={index} variants={spanVariant}>
+          {char}
+        </motion.span>
+      ))}
+</motion.h1>`;
   // #endregion End Codes
   return (
     <>
@@ -66,17 +95,24 @@ module.exports = {
         <h1 className="py-2">Fristly Install Library</h1>
         <CodeBlock code={tailwindlibrary} />
         <hr className="h-3" />
+        <h1 className="py-2">And Do This Code In Your Tirminal</h1>
+        <CodeBlock code={tailwindlibrarynpx} />
         <h1 className="text-6xl bold mb-2">Use It</h1>
         <h1 className="py-2">
-          Create <span className="font-bold">postcss.config.cjs</span> File
+          In <span className="font-bold">tailwind.config.cjs</span> File
         </h1>
-        <h1 className="py-2">And Write This</h1>
-        <CodeBlock code={postcss} />
-        <h1 className="py-2">
-          Create <span className="font-bold">tailwind.config.cjs</span> File
-        </h1>
-        <h1 className="py-2">And Write This</h1>
         <CodeBlock code={tailwindconfig} />
+      </div>
+      <div className="w-full     text-center mx-auto border border-black p-5 mb-3 md:w-2/3 lg:w-1/2">
+        <h1 className="text-6xl bold mb-2">Framer Motion</h1>
+        <h1 className="py-2">Fristly Install Library</h1>
+        <CodeBlock code={framerInstall} />
+        <hr className="h-3" />
+        <h1 className="text-6xl bold mb-2">Use It</h1>
+        <CodeBlock code={useMotion} />
+        <hr className="h-3" />
+        <h1 className="text-6xl bold mb-2">Text Animation</h1>
+        <CodeBlock code={TextAnimation} />
       </div>
     </>
   );

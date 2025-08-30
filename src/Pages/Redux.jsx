@@ -79,7 +79,8 @@ let YourAsyncThunk = createAsyncThunk(
         console.log(action.payload);
       })
   },
-});`;
+});
+`;
   return (
     <>
       <div className="w-full     text-center mx-auto border border-black p-5 mb-3 md:w-2/3 lg:w-1/2">

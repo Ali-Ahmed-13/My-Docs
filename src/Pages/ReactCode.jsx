@@ -11,10 +11,10 @@ function ReactCode() {
     <Route path="" element={<Website />}/>
   </Routes>
       `;
-  let tailwindlibrary = `npm install tailwindcss@3 postcss autoprefixer`;
+  let tailwindlibrary = `npm install -D tailwindcss@3 postcss autoprefixer`;
   let tailwindlibrarynpx = `npx tailwindcss init -p`;
   let tailwindconfig = `/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default = {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -99,7 +99,7 @@ let spanVariant = {
         <CodeBlock code={tailwindlibrarynpx} />
         <h1 className="text-6xl bold mb-2">Use It</h1>
         <h1 className="py-2">
-          In <span className="font-bold">tailwind.config.cjs</span> File
+          In <span className="font-bold">tailwind.config.js</span> File
         </h1>
         <CodeBlock code={tailwindconfig} />
       </div>

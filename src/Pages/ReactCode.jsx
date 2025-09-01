@@ -65,7 +65,15 @@ let spanVariant = {
           {char}
         </motion.span>
       ))}
-</motion.h1>`;
+</motion.h1>
+`;
+  let smoothLibrary = `npm i react-anchor-link-smooth-scroll`;
+  let useSmooth = `import AnchorLink from "react-anchor-link-smooth-scroll"; 
+  
+  <AnchorLink href="#section1" > Go to Section 1 </AnchorLink>
+
+  <div id="section1">Section 1</div>
+  `;
   // #endregion End Codes
   return (
     <>
@@ -113,6 +121,14 @@ let spanVariant = {
         <hr className="h-3" />
         <h1 className="text-6xl bold mb-2">Text Animation</h1>
         <CodeBlock code={TextAnimation} />
+      </div>
+      <div className="w-full     text-center mx-auto border border-black p-5 mb-3 md:w-2/3 lg:w-1/2">
+        <h1 className="text-6xl bold mb-2">Smooth Scroll </h1>
+        <h1 className="py-2">Fristly Install Library</h1>
+        <CodeBlock code={smoothLibrary} />
+        <hr className="h-3" />
+        <h1 className="text-6xl bold mb-2">Use It</h1>
+        <CodeBlock code={useSmooth} />
       </div>
     </>
   );

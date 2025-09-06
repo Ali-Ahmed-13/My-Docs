@@ -29,7 +29,7 @@ export default = {
   plugins: [],
 };
 `;
-  let React_Vite = `npm create vite@latest my-app -- --template react`;
+  let React_Vite = `npm create vite@latest`;
   let npmI = `npm install`;
 
   let framerInstall = `npm i framer-motion`;

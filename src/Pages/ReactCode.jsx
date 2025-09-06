@@ -7,6 +7,19 @@ function ReactCode() {
     <App />
   </BrowserRouter>
   `;
+  let FeatureSRC = `import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+})
+  `;
   let RoutesReactRouter = `  <Routes>
     <Route path="" element={<Website />}/>
   </Routes>
@@ -86,6 +99,11 @@ let spanVariant = {
           Not Forget To Do This
         </h1>
         <CodeBlock code={npmI} />
+        <h1 className="py-2 text-3xl">Feature</h1>
+        <h1 className="py-2">
+          In <span className="font-bold">vite.config.ts</span> File
+        </h1>
+        <CodeBlock code={FeatureSRC} />
       </div>
       <div className="w-full     text-center mx-auto border border-black p-5 mb-3 md:w-2/3 lg:w-1/2">
         <h1 className="text-6xl bold mb-2">React Router</h1>

@@ -19,7 +19,7 @@ export default store;
   <The Component You Want />
   </Provider>
   `;
-  let ReduxLibraries = `npm i react-redux @reduxjs/toolkit`;
+  let ReduxLibraries = `bun i react-redux @reduxjs/toolkit`;
 
   let Slice = `import { createSlice } from "@reduxjs/toolkit";
 import { AnotherAction } from "AnotherSlicePath";

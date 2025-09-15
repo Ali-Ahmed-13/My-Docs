@@ -64,7 +64,7 @@ export default function NavBar() {
     </nav>
   );
 } `;
-  let NavBarLiCode = `npm i lucide-react react-router-dom `;
+  let NavBarLiCode = `bun i lucide-react react-router-dom `;
   let BrowserRouter = `  <BrowserRouter>
   <App />
   </BrowserRouter>`;

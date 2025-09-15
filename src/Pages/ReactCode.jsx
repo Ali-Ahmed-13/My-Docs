@@ -2,7 +2,7 @@ import CodeBlock from "../Components/CodeBlock";
 
 function ReactCode() {
   // #region Start Codes
-  let reactRouterDom = `npm i react-router-dom`;
+  let reactRouterDom = `bun i react-router-dom`;
   let MainReactRouter = `  <BrowserRouter>
     <App />
   </BrowserRouter>
@@ -24,7 +24,7 @@ export default defineConfig({
     <Route path="" element={<Website />}/>
   </Routes>
       `;
-  let tailwindlibrary = `npm install -D tailwindcss@3 postcss autoprefixer`;
+  let tailwindlibrary = `bun install -D tailwindcss@3 postcss autoprefixer`;
   let tailwindlibrarynpx = `npx tailwindcss init -p`;
   let tailwindconfig = `/** @type {import('tailwindcss').Config} */
 export default = {
@@ -42,10 +42,10 @@ export default = {
   plugins: [],
 };
 `;
-  let React_Vite = `npm create vite@latest`;
-  let npmI = `npm install`;
+  let React_Vite = `bun create vite@latest`;
+  let bunI = `bun install`;
 
-  let framerInstall = `npm i framer-motion`;
+  let framerInstall = `bun i framer-motion`;
   let useMotion = `// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 `;
@@ -80,7 +80,7 @@ let spanVariant = {
       ))}
 </motion.h1>
 `;
-  let smoothLibrary = `npm i react-anchor-link-smooth-scroll`;
+  let smoothLibrary = `bun i react-anchor-link-smooth-scroll`;
   let useSmooth = `import AnchorLink from "react-anchor-link-smooth-scroll"; 
   
   <AnchorLink href="#section1" > Go to Section 1 </AnchorLink>
@@ -98,7 +98,7 @@ let spanVariant = {
         <h1 className="text-4xl bold mb-2 text-red-700">
           Not Forget To Do This
         </h1>
-        <CodeBlock code={npmI} />
+        <CodeBlock code={bunI} />
         <h1 className="py-2 text-3xl">Feature</h1>
         <h1 className="py-2">
           In <span className="font-bold">vite.config.ts</span> File
